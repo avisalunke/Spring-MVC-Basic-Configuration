@@ -7,8 +7,19 @@ Spring MVC Basic Configuration using XML files
 3:then project is created
 4: update pom.xml :
                     1: add two dependancies 
-                                            1 : spring web mvc
-                                            2 : servlet api
+                                            1 : spring web mvc :
+                                                              <dependency>
+                                                          			<groupId>org.springframework</groupId>
+                                                          			<artifactId>spring-webmvc</artifactId>
+                                                          			<version>6.0.9</version>
+                                                          		</dependency>
+                                            2 : servlet api :
+                                                              <dependency>
+                                                                  <groupId>jakarta.servlet</groupId>
+                                                                  <artifactId>jakarta.servlet-api</artifactId>
+                                                                  <version>6.0.0</version>
+                                                                  <scope>provided</scope>
+                                                              </dependency>
                     2: add plugin in boild :
                                             <build>
                                           		<plugins>
@@ -20,7 +31,7 @@ Spring MVC Basic Configuration using XML files
                                           		</plugins>
                                           	</build>
 5: update web.xml  :
-                      add  dispatcherservlet:
+                    1:  add  dispatcherservlet:
                                               <servlet>
                                                   <servlet-name>example</servlet-name>
                                                   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
